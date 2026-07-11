@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Spotify Downloader</title>
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="particles">
+    <span>♪</span>
+    <span>♫</span>
+    <span>♬</span>
+    <span>♪</span>
+    <span>♫</span>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-brands fa-spotify"></i>
+        <span>Spotify Downloader</span>
+    </div>
+
+    <div class="nav-icons">
+
+        <!-- Home -->
+        <i class="fa-solid fa-house"
+           title="Home"
+           onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        </i>
+
+        <!-- Downloads -->
+        <i class="fa-solid fa-download"
+           title="Downloads"
+           onclick="document.querySelector('.stats').scrollIntoView({behavior:'smooth'})">
+        </i>
+
+        <!-- History -->
+        <i class="fa-solid fa-music"
+           title="History"
+           onclick="document.querySelector('.history').scrollIntoView({behavior:'smooth'})">
+        </i>
+
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </div>
+
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- Dashboard -->
+
+    <div class="dashboard">
+
+        <div class="card">
+            <i class="fa-solid fa-download"></i>
+            <h3 id="downloadCountCard">0</h3>
+            <p>Downloads</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <h3 id="historyCount">0</h3>
+            <p>History</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3 style="color:#1DB954;">Online</h3>
+            <p>API Status</p>
+        </div>
+
+    </div>
+
+    <!-- Hero -->
+
+    <div class="hero">
+
+        <div class="logo-glow">
+            <i class="fa-brands fa-spotify spotify-logo"></i>
+        </div>
+
+        <h1>Spotify Downloader</h1>
+
+        <h3>Download Songs in Seconds</h3>
+
+        <p>Fast • Secure • High Quality</p>
+
+    </div>
+
+    <!-- Input -->
+
+    <input
+        type="text"
+        id="songLink"
+        placeholder="Paste Spotify Song URL">
+
+    <button onclick="downloadSong()">
+        ⬇ Download Song
+    </button>
+
+    <button
+        class="copy-btn"
+        onclick="copyLink()">
+
+        <i class="fa-solid fa-copy"></i>
+        Copy Spotify Link
+
+    </button>
+
+    <!-- Equalizer -->
+
+    <div class="equalizer">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Result -->
+
+    <div id="result"></div>
+
+    <!-- Stats -->
+
+    <div class="stats">
+
+        <h3>Total Downloads</h3>
+
+        <h1 id="downloadCount">0</h1>
+
+    </div>
+
+    <!-- History -->
+
+    <div class="history">
+
+        <div class="history-header">
+
+            <h2>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Recently Downloaded
+            </h2>
+
+            <button id="clearBtn" onclick="clearHistory()">
+                <i class="fa-solid fa-trash"></i>
+                Clear
+            </button>
+
+        </div>
+
+        <ul id="historyList"></ul>
+
+    </div>
+
+    <!-- Footer INSIDE container -->
+
+    <footer id="footer">
+
+        <div class="footer-content">
+
+            <h3>Spotify Downloader</h3>
+
+            <p>Fast • Secure • High Quality</p>
+
+            <div class="socials">
+
+                <a href="https://github.com/jaivincy" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jaivincy-v" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Jaivincy. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</div>
+
+<!-- Toast -->
+
+<div id="toast" class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastText">Success</span>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
