@@ -52,7 +52,7 @@ A modern Spotify Downloader web application built using HTML, CSS and JavaScript
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/spotify-downloader.git
+git clone https://github.com/jaivincy/spotify-downloader.git
 ```
 
 Open
