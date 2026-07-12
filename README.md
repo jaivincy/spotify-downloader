@@ -31,19 +31,23 @@ A modern Spotify Downloader web application built using HTML, CSS and JavaScript
 
 ## 📷 Screenshots
 
-### Dark Mode
+### Home
 
-(Add Screenshot)
+![Home](screenshots/home-dark.png)
 
-### Light Mode
+### Download
 
-(Add Screenshot)
+![Download](screenshots/result.png)
+
+### Mobile
+
+![Mobile](screenshots/mobile.png)
 
 ---
 
 ## 🌐 Live Demo
 
-(Add Vercel Link)
+
 
 ---
 
@@ -68,7 +72,7 @@ index.html
 Jaivincy
 
 LinkedIn:
-(Add LinkedIn)
+https://www.linkedin.com/in/jaivincy-v
 
 GitHub:
-(Add GitHub)
+https://github.com/jaivincy
